@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reconnect + Trust | La Luz del Bosque</title>
+<style>
+:root{
+  --ink:#0b0b0b;
+  --soft-ink:#161616;
+  --gold:#c9a45c;
+  --gold2:#e5c47c;
+  --cream:#f4efe5;
+  --muted:#a8a39a;
+  --line:rgba(201,164,92,.35);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--ink);color:var(--cream);
+  font-family:Georgia,"Times New Roman",serif;line-height:1.55;
+}
+.wrap{max-width:1100px;margin:auto;padding:28px 18px 80px}
+.hero{
+  min-height:76vh;display:flex;flex-direction:column;justify-content:center;
+  border:1px solid var(--line);padding:48px 32px;margin-top:18px;
+  background:linear-gradient(180deg,rgba(201,164,92,.05),rgba(255,255,255,0));
+}
+.kicker{font:600 12px/1.2 Arial,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--gold2)}
+h1{font-size:clamp(44px,9vw,92px);line-height:.95;margin:.25em 0;color:var(--cream);font-weight:500}
+h2{font-size:30px;color:var(--gold2);font-weight:500;margin:0 0 16px}
+h3{font-size:18px;color:var(--gold2);font-weight:600;margin:0 0 8px}
+p{margin:.4em 0 1em}
+.lead{font-size:22px;max-width:800px;color:#ddd6c8}
+.quote{font-size:28px;max-width:880px;color:var(--gold2);margin:32px 0}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin:18px 0 40px}
+.card{
+  grid-column:span 4;background:var(--soft-ink);border:1px solid var(--line);
+  padding:22px;min-height:180px;
+}
+.card.wide{grid-column:span 6}
+.card.full{grid-column:1/-1}
+.num{font:600 11px Arial,sans-serif;letter-spacing:.18em;color:var(--muted);text-transform:uppercase}
+section{margin:64px 0}
+.door{
+  border-left:2px solid var(--gold);padding:0 0 0 18px;margin:20px 0;
+}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-family:Arial,sans-serif;font-size:14px}
+th,td{padding:12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{color:var(--gold2);font-weight:600}
+.small{font:13px/1.5 Arial,sans-serif;color:#c6c0b6}
+.badge{display:inline-block;border:1px solid var(--line);padding:5px 9px;margin:3px 4px 3px 0;font:11px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--gold2)}
+button{
+  background:transparent;border:1px solid var(--gold);color:var(--gold2);padding:10px 14px;
+  margin:4px;cursor:pointer;font:12px Arial,sans-serif;letter-spacing:.06em;text-transform:uppercase
+}
+.toolbar{position:sticky;top:0;z-index:10;background:rgba(11,11,11,.96);padding:10px 0;border-bottom:1px solid var(--line)}
+[contenteditable="true"]:focus{outline:1px dashed var(--gold);outline-offset:4px}
+.internal{border:1px solid var(--gold);padding:28px;background:#101010}
+.hidden{display:none}
+footer{margin-top:70px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+@media(max-width:800px){.card,.card.wide{grid-column:1/-1}.hero{min-height:auto;padding:40px 20px}.wrap{padding:14px 14px 60px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="toolbar">
+    <button onclick="toggleInternal()">Show / Hide Steward View</button>
+    <button onclick="saveLocal()">Save Edits in Browser</button>
+    <button onclick="downloadPage()">Download Edited HTML</button>
+    <span class="small">Click any text on the page to edit it.</span>
+  </div>
+
+  <header class="hero">
+    <div class="kicker" contenteditable="true">Body Oracle × La Luz del Bosque</div>
+    <h1 contenteditable="true">Reconnect + Trust</h1>
+    <p class="lead" contenteditable="true">A private 5–7 day immersion in body, relationship, nature, nourishment and the restoration of inner trust.</p>
+    <p class="quote" contenteditable="true">Come out of the velocity of your life long enough to hear yourself again.</p>
+    <div>
+      <span class="badge">Arrive</span><span class="badge">Regulate</span><span class="badge">Listen</span>
+      <span class="badge">Relate</span><span class="badge">Remember</span><span class="badge">Integrate</span><span class="badge">Return</span>
+    </div>
+  </header>
+
+  <section>
+    <div class="kicker">The House</div>
+    <h2 contenteditable="true">The immersion is a living map, not a rigid retreat schedule.</h2>
+    <p class="lead" contenteditable="true">Each day has a rhythm and a doorway. The work is curated around what is actually present, with enough structure to feel held and enough space for the body, land and relationship to lead.</p>
+
+    <div class="grid">
+      <div class="card"><div class="num">Room 01</div><h3 contenteditable="true">The Stay</h3><p contenteditable="true">A private landing place at La Luz del Bosque: quiet, nature, rest, sleep, spaciousness and time away from the velocity of ordinary life.</p></div>
+      <div class="card"><div class="num">Room 02</div><h3 contenteditable="true">Nourishment</h3><p contenteditable="true">Simple, steady, grounding food with an emphasis on regular nourishment rather than restriction or “detox.” Breakfast can be self-serve; one substantial communal meal anchors the day.</p></div>
+      <div class="card"><div class="num">Room 03</div><h3 contenteditable="true">Body Oracle</h3><p contenteditable="true">Listening sessions that orient toward what is asking for attention now: body, nervous system, relationship, ancestry, meaning, choice and integration.</p></div>
+      <div class="card"><div class="num">Room 04</div><h3 contenteditable="true">Botanical Doorway</h3><p contenteditable="true">Aroma Point + botanical body work, direct relationship with selected plants and oils, and a personalized plant ally to continue working with after the immersion.</p></div>
+      <div class="card"><div class="num">Room 05</div><h3 contenteditable="true">Relational Doorway</h3><p contenteditable="true">Authentic relating, embodied dialogue, boundaries, contact, staying and leaving, and the Restoration of Trust protocol.</p></div>
+      <div class="card"><div class="num">Room 06</div><h3 contenteditable="true">The Living World</h3><p contenteditable="true">Nature experiences, movement, walking, water, land connection and simple practices with Forrest that return attention to sensory life.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="kicker">Recommended Arc</div>
+    <h2 contenteditable="true">Seven movements through the house</h2>
+    <div class="door"><h3 contenteditable="true">1. ARRIVE</h3><p contenteditable="true">Settle into the space. Orient to the land. Share a meal. Begin with a Body Oracle arrival + intuitive listening session that asks: What is here? What wants support? What does trust mean right now?</p></div>
+    <div class="door"><h3 contenteditable="true">2. REGULATE</h3><p contenteditable="true">Hands-on structural bodywork, slow movement and nervous-system settling. The emphasis is not “fixing” but giving the body enough support to become perceptible again.</p></div>
+    <div class="door"><h3 contenteditable="true">3. LISTEN</h3><p contenteditable="true">Nature time, sensory practice, rest and spacious integration. A day with less intervention can be part of the work.</p></div>
+    <div class="door"><h3 contenteditable="true">4. RELATE</h3><p contenteditable="true">Restoration of Trust + Relational Sanctuary practices: noticing activation, choice, contact, boundaries, staying, leaving, returning and speaking from present experience.</p></div>
+    <div class="door"><h3 contenteditable="true">5. REMEMBER</h3><p contenteditable="true">Aroma Point / botanical body session. Meet selected oils and plants slowly. If ancestry naturally emerges and there is enough capacity, Ancestral Witnessing may become one possible doorway.</p></div>
+    <div class="door"><h3 contenteditable="true">6. INTEGRATE</h3><p contenteditable="true">Choose the session that best meets what has surfaced: Body Oracle, relational work, bodywork, botanical work, movement, nature or spaciousness.</p></div>
+    <div class="door"><h3 contenteditable="true">7. RETURN</h3><p contenteditable="true">Closing reflection + Integration Map. Name what is coming home, what practices continue, what plant or oil becomes a companion, and what support is needed next. Dance Church may serve as a threshold back into community and movement.</p></div>
+  </section>
+
+  <section>
+    <div class="kicker">The Doorways</div>
+    <h2 contenteditable="true">A menu of what is possible</h2>
+    <div class="grid">
+      <div class="card wide"><h3 contenteditable="true">Body + Soma</h3><p contenteditable="true">Structural bodywork • embodied listening • gentle movement • somatic inquiry • nervous-system orientation</p></div>
+      <div class="card wide"><h3 contenteditable="true">Botanical + Aroma</h3><p contenteditable="true">Aroma Point therapy • botanical body work • plant listening • essential oil education • personalized plant ally / take-home recommendation</p></div>
+      <div class="card wide"><h3 contenteditable="true">Relational</h3><p contenteditable="true">Restoration of Trust • authentic relating • charge + choice • boundaries • contact • rupture/repair • staying/leaving/returning</p></div>
+      <div class="card wide"><h3 contenteditable="true">Soul + Lineage</h3><p contenteditable="true">Intuitive listening • integration • values and life direction • ancestral witnessing when appropriate and organically indicated</p></div>
+      <div class="card wide"><h3 contenteditable="true">Land + Movement</h3><p contenteditable="true">Walking • water • tending • nature immersion • embodied movement • Dance Church transition</p></div>
+      <div class="card wide"><h3 contenteditable="true">Rest + Spaciousness</h3><p contenteditable="true">Unscheduled afternoons • hammock time • journaling • sleep • reading • silence • simply being on the land</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="kicker">Nourishment</div>
+    <h2 contenteditable="true">Food that steadies rather than performs wellness</h2>
+    <p contenteditable="true">The food rhythm is simple and adaptable. Juice or fruit can be part of breakfast, but the default is regular meals with protein, fat, fiber and carbohydrates rather than a liquid-heavy “detox” structure.</p>
+    <table>
+      <tr><th>Morning</th><td contenteditable="true">Eggs + avocado + tortilla/cassava; oatmeal with nuts and fruit; yogurt/chia bowl with nut butter; tea; optional juice alongside food.</td></tr>
+      <tr><th>Midday</th><td contenteditable="true">Self-serve leftovers, soup, rice and beans, roasted vegetables, hummus, eggs, chicken/fish if desired, fruit and nuts.</td></tr>
+      <tr><th>Evening</th><td contenteditable="true">One nourishing communal meal: curry + rice, soup/stew, roasted protein + roots + greens, tacos/bowls, rice/beans/vegetables.</td></tr>
+      <tr><th>Principle</th><td contenteditable="true">Keep the kitchen easy enough that hosting does not become the main job.</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <div class="kicker">Guest Experience</div>
+    <h2 contenteditable="true">What to expect</h2>
+    <p contenteditable="true">This is not a program where every hour is filled. It is a private, relationally held immersion with a recommended arc and a menu of doorways. Together we choose what is most supportive as the week unfolds. The intention is not to force transformation, but to create enough contact, nourishment, rhythm and spaciousness for something true to become audible.</p>
+    <p class="small" contenteditable="true">This immersion is not a substitute for medical, psychiatric, addiction or eating-disorder treatment. Participation may require appropriate outside clinical support depending on current health, medication/substance use, nutritional status and psychological stability.</p>
+  </section>
+
+  <section id="internal" class="internal hidden">
+    <div class="kicker">Steward View — Internal</div>
+    <h2 contenteditable="true">Week One Working Model — $2,500</h2>
+    <p contenteditable="true">Use this as an internal starting point, not necessarily something shown to the guest. The goal is to make the invisible labor visible: lodging, food, practitioner time, preparation, hosting, coordination and integration.</p>
+
+    <table>
+      <tr><th>Category</th><th>Working allocation</th><th>Notes</th></tr>
+      <tr><td contenteditable="true">Private lodging / land</td><td contenteditable="true">$600</td><td contenteditable="true">5–7 nights; short-term hosted value rather than monthly-rent math.</td></tr>
+      <tr><td contenteditable="true">Food + kitchen provisioning</td><td contenteditable="true">$300</td><td contenteditable="true">Simple breakfasts / self-serve midday / one substantial dinner.</td></tr>
+      <tr><td contenteditable="true">Soteria — 3 major sessions</td><td contenteditable="true">$480</td><td contenteditable="true">Starting floor: 3 × $160 / ~90 min. Increase as the offering matures.</td></tr>
+      <tr><td contenteditable="true">Soteria — arrival + closing / Integration Map</td><td contenteditable="true">$240</td><td contenteditable="true">Two shorter but substantive touchpoints.</td></tr>
+      <tr><td contenteditable="true">Forrest — nature / movement</td><td contenteditable="true">$200</td><td contenteditable="true">Define duration and responsibility.</td></tr>
+      <tr><td contenteditable="true">Hosting + coordination</td><td contenteditable="true">$380</td><td contenteditable="true">Communication, prep, turnover, availability, transitions, transport buffer.</td></tr>
+      <tr><td contenteditable="true">Contingency / supplies / botanical take-home</td><td contenteditable="true">$300</td><td contenteditable="true">Oils, plant ally, supplies, unexpected costs or additional support.</td></tr>
+      <tr><th>Total</th><th contenteditable="true">$2,500</th><th></th></tr>
+    </table>
+
+    <h3 style="margin-top:28px" contenteditable="true">Possible money-to-you view</h3>
+    <p contenteditable="true">In this model, $1,100 is explicitly practitioner/hosting compensation ($480 + $240 + $380), with additional value potentially retained through lodging margin and botanical/supply margin. Forrest’s $200 is separate. Food and hard costs should be tracked so you can see the true net after the first immersion.</p>
+
+    <h3 style="margin-top:28px" contenteditable="true">Recommended inclusions for the first 5–7 day stay</h3>
+    <p contenteditable="true">1 arrival/listening session • 1 structural bodywork session • 1 Aroma Point + botanical body session • 1 Restoration of Trust / relational session • 1 nature/movement experience with Forrest • 1 integration/closing session • spacious land time • lodging • basic food.</p>
+
+    <h3 style="margin-top:28px" contenteditable="true">Keep separate unless explicitly added</h3>
+    <p contenteditable="true">Coast travel • post-stay sessions • extensive transportation • specialty excursions • outside practitioners • medical/clinical care • additional bodywork or relational sessions beyond the agreed package.</p>
+  </section>
+
+  <footer>
+    <div contenteditable="true">Reconnect + Trust — La Luz del Bosque Immersion | A Body Oracle listening practice.</div>
+    <div class="small">Living map • editable version 1</div>
+  </footer>
+</div>
+
+<script>
+const editable = [...document.querySelectorAll('[contenteditable="true"]')];
+
+function saveLocal(){
+  const data = editable.map(el=>el.innerHTML);
+  localStorage.setItem('reconnectTrustMap', JSON.stringify(data));
+  alert('Edits saved in this browser.');
+}
+function loadLocal(){
+  const raw = localStorage.getItem('reconnectTrustMap');
+  if(!raw) return;
+  const data = JSON.parse(raw);
+  editable.forEach((el,i)=>{ if(data[i]!==undefined) el.innerHTML=data[i]; });
+}
+function toggleInternal(){
+  document.getElementById('internal').classList.toggle('hidden');
+}
+function downloadPage(){
+  saveLocal();
+  const clone = document.documentElement.cloneNode(true);
+  const blob = new Blob(['<!doctype html>\n'+clone.outerHTML], {type:'text/html'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'reconnect-trust-la-luz-del-bosque-living-map.html';
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+window.addEventListener('load', loadLocal);
+</script>
+</body>
+</html>

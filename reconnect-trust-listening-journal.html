@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reconnect + Trust | Listening Journal</title>
+<style>
+:root{
+  --black:#090b0b; --panel:#111616; --panel2:#0d1212;
+  --gold:#c9a45d; --gold2:#e2c47a; --teal:#123f3d; --teal2:#1f5d59;
+  --cream:#f2ece1; --muted:#aaa398; --line:rgba(201,164,93,.28);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--black);color:var(--cream);font-family:Georgia,"Times New Roman",serif;line-height:1.58}
+.wrap{max-width:1050px;margin:auto;padding:20px 18px 80px}
+.toolbar{position:sticky;top:0;z-index:50;background:rgba(9,11,11,.97);border-bottom:1px solid var(--line);padding:10px 0}
+button{background:transparent;border:1px solid var(--gold);color:var(--gold2);padding:9px 12px;margin:3px;cursor:pointer;font:12px Arial,sans-serif;text-transform:uppercase}
+.hero{margin-top:18px;padding:68px 30px;border:1px solid var(--line);background:linear-gradient(145deg,rgba(18,63,61,.5),rgba(201,164,93,.05))}
+.kicker{font:700 11px Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--gold2)}
+h1{font-size:clamp(42px,8vw,76px);line-height:1;margin:.2em 0;font-weight:500}
+h2{font-size:30px;font-weight:500;color:var(--gold2);margin:0 0 12px}
+h3{font-size:20px;color:var(--gold2);margin:0 0 8px}
+.lead{font-size:21px;max-width:850px}
+.quote{font-size:27px;color:var(--gold2);margin:28px 0;max-width:850px}
+section{margin:58px 0}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+.card{grid-column:span 6;background:var(--panel);border:1px solid var(--line);padding:22px}
+.card.full{grid-column:1/-1}.gold{border-top:3px solid var(--gold)}.teal{border-top:3px solid var(--teal2)}
+.prompt{border-left:2px solid var(--gold);padding:0 0 0 18px;margin:20px 0}
+.practice{background:var(--panel2);border:1px solid var(--teal2);padding:20px;margin:18px 0}
+.small{font:12px/1.5 Arial,sans-serif;color:var(--muted)}
+.note{border-left:2px solid var(--teal2);padding-left:14px}
+.badge{display:inline-block;border:1px solid var(--line);padding:5px 9px;margin:3px 4px 3px 0;font:11px Arial,sans-serif;text-transform:uppercase;color:var(--gold2)}
+[contenteditable=true]:focus{outline:1px dashed var(--gold);outline-offset:3px}
+.lines{min-height:90px;border-bottom:1px dashed var(--line);padding:8px 0}
+hr{border:none;border-top:1px solid var(--line);margin:34px 0}
+@media(max-width:800px){.card{grid-column:1/-1}.hero{padding:42px 20px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="toolbar">
+  <button onclick="saveLocal()">Save on this device</button>
+  <button onclick="downloadPage()">Download Updated HTML</button>
+  <button onclick="restoreOriginal()">Restore original</button>
+  <span class="small">You can type directly into any prompt area.</span>
+</div>
+
+<header class="hero">
+  <div class="kicker" contenteditable="true">Body Oracle × La Luz del Bosque</div>
+  <h1 contenteditable="true">Reconnect + Trust</h1>
+  <p class="lead" contenteditable="true">A Listening Journal for your immersion in body, relationship, nature, nourishment, and the restoration of inner trust.</p>
+  <p class="quote" contenteditable="true">Nothing here needs to be completed. Let the questions accompany you. Write when something wants language. Leave space when it doesn't.</p>
+  <span class="badge">Notice</span><span class="badge">Feel</span><span class="badge">Wonder</span><span class="badge">Listen</span><span class="badge">Integrate</span>
+</header>
+
+<section>
+  <div class="kicker">Before You Begin</div>
+  <h2 contenteditable="true">The journal is part of the listening practice.</h2>
+  <p contenteditable="true">You do not need to analyze every experience or turn each moment into insight. Sometimes integration looks like writing. Sometimes it looks like eating, sleeping, walking, crying, laughing, sitting beside a tree, or doing absolutely nothing.</p>
+  <p class="note" contenteditable="true">If a question or practice makes you feel more overwhelmed, disoriented, faint, panicked, or disconnected, stop. Orient to the room or land around you, find another person if you need support, and return to what feels simple and steady.</p>
+</section>
+
+<section>
+  <div class="kicker">Your Compass</div>
+  <h2 contenteditable="true">A simple check-in for any moment</h2>
+  <div class="grid">
+    <div class="card gold"><h3 contenteditable="true">BODY</h3><p contenteditable="true">What sensations are most noticeable right now?</p><div class="lines" contenteditable="true"></div></div>
+    <div class="card teal"><h3 contenteditable="true">BREATH</h3><p contenteditable="true">What is the quality of my breath without trying to change it?</p><div class="lines" contenteditable="true"></div></div>
+    <div class="card teal"><h3 contenteditable="true">EMOTION</h3><p contenteditable="true">What feeling has the most energy right now?</p><div class="lines" contenteditable="true"></div></div>
+    <div class="card gold"><h3 contenteditable="true">NEED</h3><p contenteditable="true">What would support me in the next hour—not the whole week?</p><div class="lines" contenteditable="true"></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="kicker">Seven Movements</div>
+  <h2 contenteditable="true">Follow the arc, not the calendar.</h2>
+  <p contenteditable="true">You may move through these in order, circle back, or find several happening at once. Use whichever movement feels alive.</p>
+
+  <div class="prompt">
+    <h3 contenteditable="true">1. ARRIVE — What is here?</h3>
+    <p contenteditable="true">What do I notice as I enter this place? Where does my body feel open? Where does it brace, hurry, or hold back?</p>
+    <div class="lines" contenteditable="true"></div>
+    <p contenteditable="true"><strong>Land inquiry:</strong> What place on the land draws me toward it? What changes when I stay there for a few minutes without needing anything to happen?</p>
+    <div class="lines" contenteditable="true"></div>
+  </div>
+
+  <div class="prompt">
+    <h3 contenteditable="true">2. REGULATE — What helps me settle?</h3>
+    <p contenteditable="true">What tells me I am becoming more present? Warmth? Hunger? A deeper breath? Tears? Fatigue? More sensation? More choice?</p>
+    <div class="lines" contenteditable="true"></div>
+    <p contenteditable="true">What supports me today: food, rest, movement, company, solitude, touch, quiet, water, nature?</p>
+    <div class="lines" contenteditable="true"></div>
+  </div>
+
+  <div class="prompt">
+    <h3 contenteditable="true">3. LISTEN — What becomes audible when I stop pushing?</h3>
+    <p contenteditable="true">What have I been moving too quickly to hear?</p>
+    <div class="lines" contenteditable="true"></div>
+    <p contenteditable="true">What am I noticing in sensation before I turn it into a story?</p>
+    <div class="lines" contenteditable="true"></div>
+  </div>
+
+  <div class="prompt">
+    <h3 contenteditable="true">4. RELATE — What happens between me and another?</h3>
+    <p contenteditable="true">When do I move toward? When do I pull away? What happens when I need something, disagree, feel misunderstood, or want to say no?</p>
+    <div class="lines" contenteditable="true"></div>
+    <p contenteditable="true">What does trust feel like in my body when it is actually present?</p>
+    <div class="lines" contenteditable="true"></div>
+  </div>
+
+  <div class="prompt">
+    <h3 contenteditable="true">5. REMEMBER — What is older than this moment?</h3>
+    <p contenteditable="true">Did a memory, image, person, place, dream, lineage story, or younger version of me arise?</p>
+    <div class="lines" contenteditable="true"></div>
+    <p contenteditable="true">What gift do I recognize alongside the wound?</p>
+    <div class="lines" contenteditable="true"></div>
+  </div>
+
+  <div class="prompt">
+    <h3 contenteditable="true">6. INTEGRATE — What wants to stay with me?</h3>
+    <p contenteditable="true">Of everything I have encountered, what feels essential rather than merely interesting?</p>
+    <div class="lines" contenteditable="true"></div>
+    <p contenteditable="true">What is one small practice or choice I genuinely want to continue?</p>
+    <div class="lines" contenteditable="true"></div>
+  </div>
+
+  <div class="prompt">
+    <h3 contenteditable="true">7. RETURN — What am I taking home?</h3>
+    <p contenteditable="true">What do I understand differently about myself now?</p>
+    <div class="lines" contenteditable="true"></div>
+    <p contenteditable="true">What support, boundary, relationship, rhythm, or practice will help this remembering survive contact with ordinary life?</p>
+    <div class="lines" contenteditable="true"></div>
+  </div>
+</section>
+
+<section>
+  <div class="kicker">The Living World</div>
+  <h2 contenteditable="true">Listening with the land</h2>
+  <div class="grid">
+    <div class="card gold">
+      <h3 contenteditable="true">Notice</h3>
+      <p contenteditable="true">What sound, texture, temperature, animal, plant, weather pattern, or place keeps catching my attention?</p>
+      <div class="lines" contenteditable="true"></div>
+    </div>
+    <div class="card teal">
+      <h3 contenteditable="true">Relationship</h3>
+      <p contenteditable="true">What changes when I experience nature not as scenery, but as something I am in relationship with?</p>
+      <div class="lines" contenteditable="true"></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="kicker">Botanical Doorway</div>
+  <h2 contenteditable="true">Listening with the green world</h2>
+  <div class="prompt">
+    <p contenteditable="true"><strong>Plant / oil:</strong></p><div class="lines" contenteditable="true"></div>
+    <p contenteditable="true">What was my first response to the scent—before I knew anything about it?</p><div class="lines" contenteditable="true"></div>
+    <p contenteditable="true">Where did I feel it in my body?</p><div class="lines" contenteditable="true"></div>
+    <p contenteditable="true">Did an image, memory, emotion, color, word, or impulse arise?</p><div class="lines" contenteditable="true"></div>
+    <p contenteditable="true">What quality of this plant feels like something I want to remember or practice?</p><div class="lines" contenteditable="true"></div>
+  </div>
+</section>
+
+<section>
+  <div class="kicker">Session Integration</div>
+  <h2 contenteditable="true">Use this after any session that feels significant.</h2>
+  <p contenteditable="true">You can duplicate these questions in your own journal for each Body Oracle, structural, relational, botanical, movement, ancestral, or intuitive session.</p>
+
+  <div class="card full gold">
+    <p contenteditable="true"><strong>Session / practice:</strong></p><div class="lines" contenteditable="true"></div>
+    <p contenteditable="true"><strong>What did I notice during the session?</strong> Sensation, emotion, breath, movement, resistance, pleasure, numbness, images, words.</p><div class="lines" contenteditable="true"></div>
+    <p contenteditable="true"><strong>What feels like the central takeaway?</strong></p><div class="lines" contenteditable="true"></div>
+    <p contenteditable="true"><strong>What felt uncomfortable, activating, confusing, or difficult?</strong></p><div class="lines" contenteditable="true"></div>
+    <p contenteditable="true"><strong>Did any memory, image, relationship, or earlier time in my life arise?</strong></p><div class="lines" contenteditable="true"></div>
+    <p contenteditable="true"><strong>What belief or story about myself became visible?</strong></p><div class="lines" contenteditable="true"></div>
+    <p contenteditable="true"><strong>Is that belief still true now? What else might also be true?</strong></p><div class="lines" contenteditable="true"></div>
+    <p contenteditable="true"><strong>What did my body seem to want more of? Less of?</strong></p><div class="lines" contenteditable="true"></div>
+    <p contenteditable="true"><strong>What needs no interpretation yet?</strong></p><div class="lines" contenteditable="true"></div>
+    <p contenteditable="true"><strong>One thing I want to carry forward:</strong></p><div class="lines" contenteditable="true"></div>
+  </div>
+</section>
+
+<section>
+  <div class="kicker">When Something Big Arises</div>
+  <h2 contenteditable="true">Small doses. More choice. Return to the present.</h2>
+  <p contenteditable="true">You do not need to “get through” an intense feeling in one sitting. If something charged appears, work in a small enough dose that you can still notice the present moment around you.</p>
+
+  <div class="practice">
+    <h3 contenteditable="true">ORIENT → RESOURCE → MOVE → WRITE → REST</h3>
+    <p contenteditable="true"><strong>1. Orient.</strong> Look around slowly. Name five things you can see. Notice where you are and what tells you this moment is different from the past.</p>
+    <p contenteditable="true"><strong>2. Resource.</strong> Find one thing that feels neutral, pleasant, supportive, or steady: your feet, a tree, a blanket, someone's voice, the chair beneath you.</p>
+    <p contenteditable="true"><strong>3. Move, if your body wants to.</strong> Press your feet into the floor, stretch, walk, gently shake out your hands and legs for 30–60 seconds, or make another small movement that feels organizing. Stop if movement increases distress.</p>
+    <p contenteditable="true"><strong>4. Write for 3–5 minutes.</strong> Start with: “Right now I notice…” Stay close to present sensation rather than forcing the whole story.</p>
+    <p contenteditable="true"><strong>5. Rest.</strong> Do something ordinary: drink water, eat, lie down, step outside, sit quietly, or connect with someone.</p>
+  </div>
+
+  <p class="small" contenteditable="true">This is a simple trauma-informed integration practice created for this journal. It is not presented as Somatic Experiencing® instruction or as a substitute for trauma therapy.</p>
+</section>
+
+<section>
+  <div class="kicker">Pendulation of Attention</div>
+  <h2 contenteditable="true">You do not have to stare only at what hurts.</h2>
+  <div class="practice">
+    <p contenteditable="true">Notice one place in your body that feels difficult or charged. Stay only long enough to recognize it. Then intentionally notice somewhere that feels easier, neutral, supported, warm, spacious, or simply less intense.</p>
+    <p contenteditable="true">Move your attention gently between the two. You are not trying to make the difficult sensation disappear. You are reminding your nervous system that more than one experience can exist at the same time.</p>
+  </div>
+</section>
+
+<section>
+  <div class="kicker">Nourishment + Body</div>
+  <h2 contenteditable="true">Let food be part of arriving.</h2>
+  <div class="grid">
+    <div class="card teal"><h3 contenteditable="true">Before eating</h3><p contenteditable="true">What tells me I might need nourishment—even if I do not feel strong hunger?</p><div class="lines" contenteditable="true"></div></div>
+    <div class="card gold"><h3 contenteditable="true">After eating</h3><p contenteditable="true">What changes in temperature, energy, anxiety, thinking, sensation, or ability to settle?</p><div class="lines" contenteditable="true"></div></div>
+  </div>
+  <p class="note" contenteditable="true">This journal is not asking you to monitor calories, weight, or “eat perfectly.” The inquiry is simply: What helps my body feel adequately supported and more available for life?</p>
+</section>
+
+<section>
+  <div class="kicker">Evening Integration</div>
+  <h2 contenteditable="true">Three questions are enough.</h2>
+  <div class="prompt"><p contenteditable="true"><strong>What surprised me today?</strong></p><div class="lines" contenteditable="true"></div></div>
+  <div class="prompt"><p contenteditable="true"><strong>What did my body ask for?</strong></p><div class="lines" contenteditable="true"></div></div>
+  <div class="prompt"><p contenteditable="true"><strong>What can I let be unfinished tonight?</strong></p><div class="lines" contenteditable="true"></div></div>
+</section>
+
+<section>
+  <div class="kicker">Closing Integration Map</div>
+  <h2 contenteditable="true">What continues after the immersion?</h2>
+  <div class="grid">
+    <div class="card gold"><h3 contenteditable="true">I AM REMEMBERING…</h3><div class="lines" contenteditable="true"></div></div>
+    <div class="card teal"><h3 contenteditable="true">I WANT TO PRACTICE…</h3><div class="lines" contenteditable="true"></div></div>
+    <div class="card teal"><h3 contenteditable="true">I WANT SUPPORT WITH…</h3><div class="lines" contenteditable="true"></div></div>
+    <div class="card gold"><h3 contenteditable="true">MY PLANT / PRACTICE ALLY…</h3><div class="lines" contenteditable="true"></div></div>
+    <div class="card gold"><h3 contenteditable="true">A BOUNDARY I WANT TO HONOR…</h3><div class="lines" contenteditable="true"></div></div>
+    <div class="card teal"><h3 contenteditable="true">A RELATIONSHIP I WANT TO TEND…</h3><div class="lines" contenteditable="true"></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="kicker">A Final Reminder</div>
+  <p class="quote" contenteditable="true">Integration is not proving that you changed. It is noticing what became more true, and practicing relationship with it.</p>
+  <p class="small" contenteditable="true">This journal is an experiential wellness companion, not medical or psychiatric care. If you experience a significant increase in distress, inability to care for yourself, thoughts of harming yourself, severe confusion, or other urgent symptoms, reach out to an appropriate healthcare professional or emergency support rather than relying on the journal or immersion alone.</p>
+</section>
+
+<footer class="small">
+  <div contenteditable="true">Reconnect + Trust • Listening Journal • Body Oracle × La Luz del Bosque</div>
+</footer>
+
+</div>
+
+<script>
+const editableEls=[...document.querySelectorAll('[contenteditable=true]')];
+const ORIGINAL=editableEls.map(el=>el.innerHTML);
+
+function saveLocal(){
+  const data=editableEls.map(el=>el.innerHTML);
+  localStorage.setItem('reconnectTrustJournalV1',JSON.stringify(data));
+  alert('Saved on this device. To share these entries, download a new HTML file.');
+}
+function loadLocal(){
+  const raw=localStorage.getItem('reconnectTrustJournalV1');
+  if(!raw)return;
+  try{
+    const data=JSON.parse(raw);
+    editableEls.forEach((el,i)=>{if(data[i]!==undefined)el.innerHTML=data[i]});
+  }catch(e){}
+}
+function restoreOriginal(){
+  if(!confirm('Restore the original journal and remove saved entries on this device?'))return;
+  localStorage.removeItem('reconnectTrustJournalV1');
+  editableEls.forEach((el,i)=>el.innerHTML=ORIGINAL[i]);
+}
+function downloadPage(){
+  const current=editableEls.map(el=>el.innerHTML);
+  const clone=document.documentElement.cloneNode(true);
+  [...clone.querySelectorAll('[contenteditable=true]')].forEach((el,i)=>el.innerHTML=current[i]);
+  const blob=new Blob(['<!doctype html>\n'+clone.outerHTML],{type:'text/html'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download='reconnect-trust-listening-journal.html';
+  document.body.appendChild(a);a.click();a.remove();
+  setTimeout(()=>URL.revokeObjectURL(a.href),500);
+}
+window.addEventListener('load',loadLocal);
+</script>
+</body>
+</html>
