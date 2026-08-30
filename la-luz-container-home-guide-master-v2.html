@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>La Luz del Bosque | Welcome to the Container Home</title>
+<style>
+:root{
+  --cream:#f4eddf;
+  --paper:#fffaf2;
+  --teal:#123f3d;
+  --teal2:#1f5a55;
+  --gold:#b58a3a;
+  --ink:#203633;
+  --muted:#6f756f;
+  --line:#dacbac;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--cream);
+  color:var(--ink);
+  font-family:Georgia,"Times New Roman",serif;
+  line-height:1.56;
+}
+.wrap{max-width:1080px;margin:auto;padding:18px 18px 80px}
+.toolbar{
+  position:sticky;top:0;z-index:20;
+  background:#f4eddff2;
+  border-bottom:1px solid var(--line);
+  padding:8px 0;
+}
+button{
+  background:var(--teal);
+  color:white;
+  border:0;
+  padding:9px 12px;
+  margin:3px;
+  cursor:pointer;
+  font:11px Arial,sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.05em;
+}
+.hero{
+  margin-top:14px;
+  background:var(--teal);
+  color:white;
+  padding:62px 30px 54px;
+  border-bottom:5px solid var(--gold);
+}
+.eyebrow{
+  font:700 10px Arial,sans-serif;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--gold);
+}
+.hero .eyebrow{color:#e0c47f}
+h1{
+  font-size:clamp(42px,8vw,74px);
+  line-height:1;
+  margin:.18em 0;
+  font-weight:500;
+}
+h2{
+  font-size:30px;
+  color:var(--teal);
+  font-weight:500;
+  margin:0 0 12px;
+}
+h3{
+  font-size:19px;
+  color:var(--teal);
+  margin:0 0 8px;
+}
+.lead{font-size:21px;max-width:820px}
+.quote{font-size:25px;color:#e6cf9b;max-width:840px}
+section{margin:44px 0}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  gap:14px;
+}
+.card{
+  grid-column:span 4;
+  background:var(--paper);
+  border:1px solid var(--line);
+  padding:19px;
+}
+.wide{grid-column:span 6}
+.full{grid-column:1/-1}
+.goldtop{border-top:4px solid var(--gold)}
+.tealtop{border-top:4px solid var(--teal2)}
+.callout{
+  background:var(--paper);
+  border-left:4px solid var(--gold);
+  padding:16px 18px;
+  margin:18px 0;
+}
+.soft{
+  background:#eef3f0;
+  border-left-color:var(--teal2);
+}
+.rules p{margin:7px 0}
+.service p{padding:9px 0;border-bottom:1px solid var(--line)}
+.price{font-size:36px;color:var(--gold);margin:14px 0}
+.small{font:12px Arial,sans-serif;color:var(--muted)}
+.steward{
+  background:#e8dfd1;
+  border:2px dashed var(--teal);
+  padding:22px;
+}
+.notes{
+  min-height:100px;
+  border:1px dashed var(--gold);
+  background:var(--paper);
+  padding:10px;
+}
+[contenteditable=true]:focus{
+  outline:2px dashed var(--gold);
+  outline-offset:3px;
+}
+.guestMode .steward{display:none}
+@media(max-width:760px){
+  .card,.wide{grid-column:1/-1}
+  .hero{padding:42px 21px}
+}
+@media print{
+  .toolbar,.steward{display:none!important}
+  body{background:white}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="toolbar">
+  <button id="viewBtn" onclick="toggleView()">Preview Guest View</button>
+  <button onclick="saveLocal()">Save on This Device</button>
+  <button onclick="downloadMaster()">Download Editable Master</button>
+  <button onclick="downloadGuest()">Download Locked Guest Copy</button>
+</div>
+
+<section class="hero guest">
+  <div class="eyebrow">LA LUZ DEL BOSQUE · COSTA RICA</div>
+  <h1 contenteditable="true">Welcome to the Container Home</h1>
+  <p class="lead" contenteditable="true">A private place to reset, recalibrate, rest, move, read, listen and come back into your own rhythm.</p>
+  <p class="quote" contenteditable="true">This home is enclosed and comfortable, while still remaining in close relationship with the land around it.</p>
+</section>
+
+<section class="guest">
+  <div class="eyebrow">THE HOME</div>
+  <h2 contenteditable="true">Make yourself at home.</h2>
+  <p contenteditable="true">The Container Home is designed to offer both privacy and spaciousness. One side can be used for movement, stretching, yoga or a personal practice. The hammock side and living area are there for lounging, reading, resting and doing very little.</p>
+  <div class="grid">
+    <div class="card tealtop">
+      <h3>Movement + Practice</h3>
+      <p contenteditable="true">Feel free to use the open side of the home for yoga, mobility, meditation, breath or your own movement practice.</p>
+    </div>
+    <div class="card tealtop">
+      <h3>Rest + Lounge</h3>
+      <p contenteditable="true">Use the hammock, living room and quieter corners of the home to rest, journal, listen to music, read or simply settle.</p>
+    </div>
+    <div class="card tealtop">
+      <h3>Books</h3>
+      <p contenteditable="true">You are welcome to read anything from the library. If you fall deeply in love with a book and would truly like to take it with you, please ask us first. Otherwise, leave it here for the next person to enjoy.</p>
+    </div>
+  </div>
+</section>
+
+<section class="guest">
+  <div class="eyebrow">ORIENTATION + SAFETY</div>
+  <h2 contenteditable="true">A new place can take a moment to feel familiar.</h2>
+  <p contenteditable="true">La Luz del Bosque is a very safe environment. At the same time, arriving somewhere new can temporarily stir the nervous system simply because the sounds, rhythms, people and landscape are unfamiliar.</p>
+  <p contenteditable="true">If something feels unusual or you are unsure what you are hearing or seeing, please reach out rather than letting your imagination fill in the blanks. We can be available by phone, message or walkie-talkie when one is provided.</p>
+  <div class="callout soft" contenteditable="true">
+    <b>If there is an actual emergency,</b> call us immediately or come to the main house. For ordinary questions or moments of uncertainty, please message or call rather than dropping by the house unexpectedly. This helps us stay available while also maintaining the privacy and rhythm of our own home.
+  </div>
+</section>
+
+<section class="guest">
+  <div class="eyebrow">WHAT TO PACK</div>
+  <h2 contenteditable="true">A few things make mountain life easier.</h2>
+  <div class="grid">
+    <div class="card goldtop"><h3>Rain + Trails</h3><p contenteditable="true">Umbrella • rain jacket / poncho • rain shoes or boots • sturdy closed-toe walking shoes</p></div>
+    <div class="card goldtop"><h3>Cooler Hours</h3><p contenteditable="true">1 long-sleeve shirt • 1 light sweater or jacket • 2 pairs of pants, in addition to your usual warm-weather clothing</p></div>
+    <div class="card goldtop"><h3>Essentials</h3><p contenteditable="true">Bug repellent • sunscreen • headlamp or flashlight • refillable water bottle • personal medications</p></div>
+  </div>
+</section>
+
+<section class="guest">
+  <div class="eyebrow">WILDLIFE + SMALL CREATURES</div>
+  <h2 contenteditable="true">Nature is not looking for a fight.</h2>
+  <p contenteditable="true">This is a living tropical landscape. Most wildlife wants space, not interaction. Awareness is usually enough: look where you step, avoid reaching blindly into hidden spaces, keep food and debris tidy, and let wild things remain wild.</p>
+  <div class="grid">
+    <div class="card">
+      <h3>Snakes</h3>
+      <p contenteditable="true">Wear closed shoes in taller grass, on trails and after dark. Use a flashlight or headlamp in low light. If you see a snake, stop, give it plenty of room and back away slowly. Do not touch, corner, catch or kill it. If one is near the home, contact us.</p>
+    </div>
+    <div class="card">
+      <h3>Scorpions</h3>
+      <p contenteditable="true">Scorpions like dark, protected places. Shake out shoes, clothing or towels left on the floor or outside. Avoid putting bare hands into boxes, stored materials, wood piles or debris.</p>
+    </div>
+    <div class="card">
+      <h3>Ants</h3>
+      <p contenteditable="true">Some ants bite or sting, including bullet ants and other stinging species. Do not stand on, sit beside or disturb an active nest or trail. If a moving column passes through, simply give it space and let it move on.</p>
+    </div>
+  </div>
+  <div class="callout" contenteditable="true"><b>If bitten by a snake:</b> seek emergency medical care immediately. Do not cut or suck the bite, apply ice, use a tourniquet or try to capture the snake. In Costa Rica, call <b>9-1-1</b>.</div>
+</section>
+
+<section class="guest">
+  <div class="eyebrow">SOUNDS OF THE LAND</div>
+  <h2 contenteditable="true">Some sounds may be new to you.</h2>
+  <div class="grid">
+    <div class="card"><h3>Neighbors + Road</h3><p contenteditable="true">The road beside the Container Home is a private shared road. Our neighbors at Diamante Luz are a small community of friends nearby, so you may occasionally hear voices or a car passing.</p></div>
+    <div class="card"><h3>Wild Sounds</h3><p contenteditable="true">Coyotes live farther down the road and are heard far more often than seen. Howler monkeys can sound incredibly loud and dramatic. There is also a large chorus of birds whose calls may be unfamiliar.</p></div>
+    <div class="card"><h3>Daily Rhythm</h3><p contenteditable="true">Sunset is relatively consistent throughout the year, and many people naturally begin waking earlier and feeling sleepy around 8:30–9:00 pm.</p></div>
+  </div>
+  <p contenteditable="true">We have not had problems with the animals or neighborhood sounds described here. If something feels unfamiliar and your system starts telling a frightening story, feel free to check in with us so we can help you orient to what is actually happening.</p>
+</section>
+
+<section class="guest">
+  <div class="eyebrow">COOLING + POWER</div>
+  <h2 contenteditable="true">A few practical rhythms of the home.</h2>
+  <div class="grid">
+    <div class="card wide">
+      <h3>Cooling the Space</h3>
+      <p contenteditable="true">Heat rises, so the upstairs bedroom can be warmer during the middle of the day. Open the windows and use the fan for airflow. The bedroom may feel best in the early morning and evening, with the lower living spaces more comfortable during warmer hours.</p>
+    </div>
+    <div class="card wide">
+      <h3>Power Outages</h3>
+      <p contenteditable="true">Short power outages are common in this area, especially in rainy weather. A flashlight will be accessible in the home. We also recommend keeping your own headlamp or flashlight where you can find it easily after dark.</p>
+    </div>
+  </div>
+</section>
+
+<section class="guest">
+  <div class="eyebrow">DOGS ON THE LAND</div>
+  <h2 contenteditable="true">You may have a few friendly visitors.</h2>
+  <p contenteditable="true">Our dogs live on the property and may wander by to say hello. They are <b>not allowed inside the Container Home</b>. If they try to come in, please lovingly guide them back outside and keep the doorway clear. Think of yourself as a temporary auntie or uncle helping them remember the house rules.</p>
+</section>
+
+<section class="guest">
+  <div class="eyebrow">RECYCLING + FOOD WASTE</div>
+  <h2 contenteditable="true">A different rhythm for waste.</h2>
+  <div class="grid">
+    <div class="card tealtop"><h3>Recycling</h3><p contenteditable="true">Hard and soft plastics, cans, glass and accepted recyclables go into the recycling bin. Please rinse or wash and fully dry items before placing them inside.</p></div>
+    <div class="card tealtop"><h3>Food + Compost</h3><p contenteditable="true">Food scraps go into the separate food-waste container. Appropriate scraps are taken to the chickens.</p></div>
+    <div class="card tealtop"><h3>Bathroom</h3><p contenteditable="true">The bathroom bin is for <b>used toilet paper only</b>. No wipes, sanitary products, wrappers or other plastics. Feminine-product wrappers go into recycling.</p></div>
+  </div>
+</section>
+
+<section class="guest">
+  <div class="eyebrow">LAUNDRY</div>
+  <h2 contenteditable="true">Laundry is simple.</h2>
+  <p contenteditable="true">For now, please communicate with us if you need laundry done and we can arrange it with you. A washer and dryer may eventually be available directly at the Container Home; if so, updated instructions will be provided here.</p>
+</section>
+
+<section class="guest">
+  <div class="eyebrow">HOUSE AGREEMENTS</div>
+  <h2 contenteditable="true">Simple agreements help the home + land stay well.</h2>
+  <div class="callout rules">
+    <p contenteditable="true">• Keep food sealed and surfaces reasonably clean so insects and wildlife are not invited indoors.</p>
+    <p contenteditable="true">• Do not feed or handle wildlife.</p>
+    <p contenteditable="true">• Please keep our dogs outside the Container Home.</p>
+    <p contenteditable="true">• No parties, events or unregistered overnight guests without prior agreement.</p>
+    <p contenteditable="true">• Respect quiet around the shared land, neighboring properties and the plantel.</p>
+    <p contenteditable="true">• Ask before harvesting unfamiliar plants.</p>
+    <p contenteditable="true">• Let us know promptly about leaks, breakage, electrical issues or anything that needs attention.</p>
+  </div>
+</section>
+
+<section class="guest">
+  <div class="eyebrow">IF YOU ARE HERE FOR AN IMMERSION</div>
+  <h2 contenteditable="true">Let the home be part of the practice.</h2>
+  <p contenteditable="true">The Container Home is not simply where you sleep between sessions. It is also a place for rest, nourishment, journaling, quiet, movement, integration and listening. You do not need to fill every open hour. Spaciousness is intentionally part of the immersion.</p>
+  <p contenteditable="true">Let us know if your body needs more rest, food, quiet or pacing than originally imagined. The arc is responsive rather than rigid.</p>
+</section>
+
+<section class="guest">
+  <div class="eyebrow">BODY ORACLE + MOVEMENT</div>
+  <h2 contenteditable="true">Curious about experiences while you're here?</h2>
+  <p contenteditable="true">If you are not staying as part of an immersion and would like to explore sessions offered at La Luz del Bosque, feel free to check in with Forrest + Soti.</p>
+  <div class="price">$100 <span style="font:14px Arial;color:#6f756f">· 1.5–2 hour sessions</span></div>
+  <div class="service">
+    <p contenteditable="true"><b>Body Oracle Listening Session</b> — somatic, relational, energetic and intuitive listening.</p>
+    <p contenteditable="true"><b>Structural Bodywork + Soma</b> — deep structural work, hands-on healing, Chinese medicine and embodied integration.</p>
+    <p contenteditable="true"><b>Botanical Doorway + Aroma Point Therapy</b> — aromatic treatment, acupoints, plant listening, meditation and self-application.</p>
+    <p contenteditable="true"><b>Restoration of Trust + Relational Practice</b> — authentic relating, boundaries, charge + choice, staying / leaving / returning and repair.</p>
+    <p contenteditable="true"><b>Ancestral Witnessing</b> — lineage, gifts, wounds, witnessing and remembrance.</p>
+    <p contenteditable="true"><b>Intuitive / Akashic Listening</b> — intuitive inquiry, imagery, meaning and integration.</p>
+    <p contenteditable="true"><b>Embodied Strength + Movement with Forrest</b> — individualized strength and movement using weights, rings, bodyweight foundations, spirals, locomotion and principles drawn from contact improvisation.</p>
+  </div>
+  <div class="price" style="font-size:26px" contenteditable="true">$30 · 45 minutes</div>
+  <p contenteditable="true"><b>Morning Grounding Practice with Forrest</b> — breath, yoga, meditation and embodied arrival.</p>
+</section>
+
+<section class="steward">
+  <div class="eyebrow">STEWARD VIEW · NOT INCLUDED IN GUEST DOWNLOAD</div>
+  <h2>Backend items to complete</h2>
+  <div class="grid">
+    <div class="card wide">
+      <h3>Guest Logistics</h3>
+      <p contenteditable="true">□ Add exact Wi-Fi details<br>□ Add check-in / check-out times<br>□ Add road / parking / 4x4 guidance<br>□ Add emergency numbers besides 9-1-1<br>□ Add nearest clinic / hospital<br>□ Add smoking / candle / fire policy<br>□ Add pet policy if outside pets are ever permitted</p>
+    </div>
+    <div class="card wide">
+      <h3>Communication Boundary</h3>
+      <p contenteditable="true">Choose your actual system before publishing: WhatsApp / phone / walkie-talkie. Clarify what counts as an emergency versus an ordinary question and where you want guests to contact you.</p>
+      <div class="notes" contenteditable="true"></div>
+    </div>
+  </div>
+</section>
+
+<section class="guest">
+  <div class="eyebrow">WELCOME</div>
+  <h2 contenteditable="true">Questions while you're here?</h2>
+  <p contenteditable="true">Please reach out to Forrest + Soti. We would much rather answer a question and help you orient than have you sit alone wondering what something means.</p>
+</section>
+
+</div>
+
+<script>
+const editables=[...document.querySelectorAll('[contenteditable=true]')];
+function saveLocal(){
+  localStorage.setItem('LaLuzContainerGuideV2',JSON.stringify(editables.map(e=>e.innerHTML)));
+  alert('Saved on this device. Download the Editable Master for a portable copy.');
+}
+function loadLocal(){
+  const r=localStorage.getItem('LaLuzContainerGuideV2');
+  if(!r)return;
+  try{
+    const d=JSON.parse(r);
+    editables.forEach((e,i)=>{if(d[i]!==undefined)e.innerHTML=d[i]});
+  }catch(e){}
+}
+function toggleView(){
+  document.body.classList.toggle('guestMode');
+  document.getElementById('viewBtn').textContent=
+    document.body.classList.contains('guestMode')?'Show Steward View':'Preview Guest View';
+}
+function downloadMaster(){downloadClone(false,'la-luz-container-home-guide-master-v2.html')}
+function downloadGuest(){downloadClone(true,'la-luz-container-home-guest-guide-v2.html')}
+function downloadClone(guest,name){
+  const vals=editables.map(e=>e.innerHTML);
+  const clone=document.documentElement.cloneNode(true);
+  [...clone.querySelectorAll('[contenteditable=true]')].forEach((e,i)=>e.innerHTML=vals[i]);
+  if(guest){
+    clone.querySelectorAll('.steward,.toolbar,script').forEach(e=>e.remove());
+    clone.querySelectorAll('[contenteditable]').forEach(e=>e.removeAttribute('contenteditable'));
+    clone.querySelector('body').classList.add('guestMode');
+  }
+  const blob=new Blob(['<!doctype html>\n'+clone.outerHTML],{type:'text/html'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download=name;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+}
+window.addEventListener('load',loadLocal);
+</script>
+</body>
+</html>
