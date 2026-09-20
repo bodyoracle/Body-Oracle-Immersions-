@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Return + Stabilize | Living Map</title>
+<style>
+:root{
+  --black:#080b0b; --ink:#101716; --teal:#0d4f4b; --teal2:#16746d;
+  --gold:#c6a15b; --cream:#f2ead9; --muted:#b8b2a6; --line:rgba(198,161,91,.38);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--black);color:var(--cream);font-family:Georgia,"Times New Roman",serif;line-height:1.55}
+.wrap{max-width:1040px;margin:auto;padding:34px 18px 80px}
+header{border:1px solid var(--line);padding:48px 30px;text-align:center;background:linear-gradient(145deg,#07100f,#0b2725)}
+.eyebrow,.kicker{font-family:Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-size:.75rem}
+h1{font-weight:400;font-size:clamp(2.3rem,6vw,4.6rem);margin:.2em 0;color:#fff}
+.subtitle{max-width:720px;margin:auto;font-size:1.15rem;color:#ddd4c4}
+section{margin-top:44px}
+h2{font-weight:400;color:var(--gold);font-size:2rem;margin:0 0 10px}
+h3{color:#fff;font-weight:400;margin-bottom:6px}
+p{max-width:850px}
+.card{border:1px solid var(--line);background:#0c1514;padding:22px;margin:14px 0}
+.quote{font-size:1.45rem;color:#fff;border-left:3px solid var(--gold);padding:8px 0 8px 22px;margin:28px 0}
+.arc{display:grid;gap:10px;margin-top:20px}
+.step{border:1px solid rgba(22,116,109,.8);background:linear-gradient(90deg,rgba(13,79,75,.45),rgba(8,11,11,.3));padding:18px 20px}
+.step b{display:block;color:var(--gold);font-family:Arial,sans-serif;font-size:.77rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px}
+.arrow{text-align:center;color:var(--gold);font-size:1.4rem}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media(max-width:700px){.grid{grid-template-columns:1fr} header{padding:35px 18px}}
+.prompt{border-bottom:1px solid var(--line);padding:18px 0}
+.prompt strong{color:var(--gold)}
+.return-table{width:100%;border-collapse:collapse;margin-top:18px}
+.return-table th,.return-table td{border:1px solid var(--line);padding:14px;vertical-align:top}
+.return-table th{background:var(--teal);color:white;font-family:Arial,sans-serif;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase}
+.return-table td:first-child{color:var(--gold);font-weight:bold;width:18%}
+.practice{background:#0a2421;border:1px solid var(--gold);padding:24px;margin-top:18px}
+.points{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.point{border:1px solid var(--line);padding:18px;background:#0c1514}
+.point h3{color:var(--gold)}
+.small{font-size:.9rem;color:var(--muted)}
+footer{text-align:center;margin-top:60px;color:var(--muted);font-size:.9rem}
+button{background:var(--teal);color:white;border:1px solid var(--gold);padding:10px 14px;cursor:pointer;margin:4px}
+.toolbar{position:sticky;top:8px;text-align:right;z-index:4;margin-bottom:8px}
+[contenteditable="true"]:focus{outline:1px dashed var(--gold);outline-offset:4px}
+@media print{.toolbar{display:none} body{background:white;color:#111}.card,.step,.practice,.point{background:white;color:#111}.subtitle,.small{color:#444} h1,h3,.quote{color:#111} header{background:white} .return-table th{background:#eee;color:#111}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="toolbar">
+<button onclick="saveLocal()">Save on this device</button>
+<button onclick="downloadHTML()">Download Updated HTML</button>
+</div>
+
+<main id="editable" contenteditable="true">
+<header>
+<div class="eyebrow">Body Oracle · Reconnect + Trust</div>
+<h1>Return + Stabilize</h1>
+<div class="subtitle">A living map of what transformed, what life revealed through direct experience, and what your body is asking you to remember now.</div>
+</header>
+
+<section>
+<div class="kicker">The first immersion</div>
+<h2>Reconnect + Trust</h2>
+<p>You left with more access to yourself: confidence, connection, discernment, pleasure, choice, and a clearer relationship with what matters.</p>
+<div class="quote">The work was never to become someone who never loses her anchor. The practice is learning to recognize when the anchor becomes difficult to feel — and knowing the way back.</div>
+<div class="grid">
+<div class="card"><h3>What became available</h3><p>More of you. More body. More choice. More connection to what feels true and alive.</p></div>
+<div class="card"><h3>What supported it</h3><p>Structure · nourishment · land · movement · relationship · plants · witnessing · rest · repeated return to the body.</p></div>
+</div>
+</section>
+
+<section>
+<div class="kicker">Life lived</div>
+<h2>The Journey Became the Teacher</h2>
+<p>Leaving the immersion brought the practice into ordinary life. There was friendship, fun, freedom and connection — and then the familiar pull toward contact returned. Rather than treating what happened as erasing the first immersion, we can use it as direct information about your pattern and your pathways home.</p>
+
+<div class="arc">
+<div class="step"><b>01 · Connected</b>I left feeling more connected to myself and to what matters.</div><div class="arrow">↓</div>
+<div class="step"><b>02 · Life</b>I returned to friendship, pleasure, freedom and ordinary life.</div><div class="arrow">↓</div>
+<div class="step"><b>03 · The Pull</b>A gnawing appeared. Something in me wanted contact.</div><div class="arrow">↓</div>
+<div class="step"><b>04 · The Reason</b>I found a reason that made reaching out feel necessary or right.</div><div class="arrow">↓</div>
+<div class="step"><b>05 · Contact</b>Once contact began, my internal position changed.</div><div class="arrow">↓</div>
+<div class="step"><b>06 · Losing the Anchor</b>What I meant to say gave way to questions, longing, explaining, possibility and his responses.</div><div class="arrow">↓</div>
+<div class="step"><b>07 · The Whirlwind</b>The field narrowed. Activation and impulsive choices took me farther from myself.</div><div class="arrow">↓</div>
+<div class="step"><b>08 · Support</b>Other people entered the field. A boundary was made. Contact was blocked.</div><div class="arrow">↓</div>
+<div class="step"><b>09 · Return</b>I came back — not to the beginning, but with new information about myself.</div>
+</div>
+</section>
+
+<section>
+<div class="kicker">Body Oracle practice</div>
+<h2>SET → NEED → ANCHOR → CHOICE → RETURN</h2>
+<div class="grid">
+<div class="card"><h3>SET · Sensation · Emotion · Thought</h3><p><strong>Sensation:</strong> What is happening in my body right now?<br><strong>Emotion:</strong> What feeling is here?<br><strong>Thought:</strong> What story, belief, argument or imagined conversation is organizing me?</p></div>
+<div class="card"><h3>NEED</h3><p>Under the urge, what am I actually needing? Contact? Reassurance? Expression? Witnessing? Rest? Food? Belonging? To be understood? To discharge anger? To not be alone?</p></div>
+<div class="card"><h3>ANCHOR</h3><p>Feet. Breath. Stone. Witnessing Eye. Plant ally. A trusted person. Food. Water. Movement. Land. What brings me back into enough contact with myself to have choice?</p></div>
+<div class="card"><h3>CHOICE</h3><p>What choices can I see from here? Do I need to act now? Can expression happen without contact? What choice protects tomorrow's relationship with myself?</p></div>
+</div>
+<div class="practice"><h3>RETURN</h3><p>Returning is not punishment and it is not proof that I failed. Return means restoring relationship with body, nourishment, sleep, rhythm, safe people, land, movement, and what matters — then listening for what the experience taught me.</p></div>
+</section>
+
+<section>
+<div class="kicker">The map for ordinary life</div>
+<h2>Recognize Earlier · Return Sooner</h2>
+<table class="return-table">
+<tbody><tr><th>State</th><th>What I may notice</th><th>What I choose</th></tr>
+<tr><td>CONNECTED</td><td>I feel like myself. Friendship, body, nature, creativity and ordinary pleasure are available.</td><td>Live. I do not have to manufacture processing.</td></tr>
+<tr><td>THE PULL</td><td>I think about contact, rehearse conversations, check, imagine, or begin searching for a reason to reach.</td><td>Name it: “Something in me wants contact.” SET before action.</td></tr>
+<tr><td>THE TUNNEL</td><td>Urgency, righteousness, bargaining, “I just need to tell him…” The field becomes smaller.</td><td>No immediate decision. Eat. Hydrate. Move. Change environment. Bring in support.</td></tr>
+<tr><td>LOSING ANCHOR</td><td>My original intention disappears. His responses begin organizing me. I explain, question, seek reassurance or imagine possibility.</td><td>End contact. Anchor. Let someone safe into the field.</td></tr>
+<tr><td>WHIRLWIND</td><td>Panic, impulsivity, isolation, substances, shame, or choices that move me farther from myself.</td><td>This is not a solo regulation moment. Activate my external support and safety plan.</td></tr>
+<tr><td>RETURN</td><td>I can feel even a small amount of orientation again.</td><td>No punishment. Restore body, food, sleep, people, rhythm and support. Learn later.</td></tr>
+</tbody></table>
+<div class="quote">Longing is real. Urgency is real. Neither has to become instruction or the reason for contact.</div>
+</section>
+
+<section>
+<div class="kicker">Discernment</div>
+<h2>Three Things That Can Feel Like One</h2>
+<div class="grid">
+<div class="card"><h3>I have something to say.</h3><p>What wants expression?</p></div>
+<div class="card"><h3>I want him to understand.</h3><p>What changes inside me if he does — or doesn't?</p></div>
+<div class="card"><h3>I want contact.</h3><p>What am I hoping contact will give me?</p></div>
+<div class="card"><h3>Expression without contact</h3><p>Unsent letter · voice note · movement · ritual · trusted witness · journaling · speaking it aloud without making him the recipient.</p></div>
+</div>
+</section>
+
+<section>
+<div class="kicker">Remember your allies</div>
+<h2>Stone · Witnessing Eye · Plants · Oils · Points</h2>
+<div class="grid">
+<div class="card"><h3>The Stone</h3><p>Remember the part, strategy or longing you chose to hold differently. You do not have to reject the part that once protected you in order to choose differently now.</p></div>
+<div class="card"><h3>The Witnessing Eye</h3><p>The one who can stay. The loving witness who can notice activation without handing it the steering wheel.</p></div>
+<div class="card"><h3>Plants + Oils</h3><p>Return to relationship before information. Smell. Notice. Let the body respond before deciding what the plant “means.” Ask: <em>What becomes more available in me in relationship with this plant?</em></p></div>
+<div class="card"><h3>Land + Body</h3><p>Feet on earth. Water. Walking. Nourishment. Breath. Movement. Friendship. Ordinary pleasure. Stabilization can be simple.</p></div>
+</div>
+
+<div class="points">
+<div class="point"><h3>Shen Men · Ear Point</h3><p>A familiar point from your immersion. Let touching the point become a cue to pause, orient and listen rather than an instruction to force yourself into calm.</p></div>
+<div class="point"><h3>Point Zero · Ear Point</h3><p>&nbsp;Another point from the immersion. Let it mark a return to center: <em>Where am I? What is happening in me? What do I need before I choose? = &nbsp;Together these points allow us to come back to ourselves, they are perfect for anxiety, panic, overwhelm.&nbsp;</em></p></div>
+</div>
+<p class="small">These points and aromatic practices are offered here as familiar Body Oracle supports from your immersion, not as substitutes for medical or mental-health care.</p>
+</section>
+
+<section>
+<div class="kicker">Journal</div>
+<h2>What Life Is Asking Me Now</h2>
+<div class="prompt"><strong>01.</strong> What did I genuinely discover about myself during Reconnect + Trust?</div>
+<div class="prompt"><strong>02.</strong> What did I discover only after I returned to ordinary life?</div>
+<div class="prompt"><strong>03.</strong> What are the earliest sensations that tell me the pull has begun?</div>
+<div class="prompt"><strong>04.</strong> What does contact promise me in that moment?</div>
+<div class="prompt"><strong>05.</strong> Beneath that promise, what am I actually needing?</div>
+<div class="prompt"><strong>06.</strong> What happens in my body when another person's response begins organizing me?</div>
+<div class="prompt"><strong>07.</strong> What stabilizes me reliably — even when I do not feel like choosing it?</div>
+<div class="prompt"><strong>08.</strong> Who belongs in my support field before I reach the whirlwind?</div>
+<div class="prompt"><strong>09.</strong> What does choosing myself look like in ordinary, concrete actions?</div>
+<div class="prompt"><strong>10.</strong> What am I ready to practice returning to — again and again?</div>
+</section>
+
+<section>
+<div class="kicker">Return + Stabilize</div>
+<h2>What I Choose to Return To</h2>
+<div class="card">
+<p><strong>My body:</strong> ____________________________________________</p>
+<p><strong>My people:</strong> ___________________________________________</p>
+<p><strong>My rhythms:</strong> __________________________________________</p>
+<p><strong>My places:</strong> ___________________________________________</p>
+<p><strong>My practices:</strong> _________________________________________</p>
+<p><strong>When I cannot find the anchor alone, I will:</strong> _______________________</p>
+</div>
+<div class="quote">I do not have to stay anchored perfectly. I am learning the pathways home.</div>
+</section>
+
+<footer>BODY ORACLE · A LISTENING PRACTICE<br>Return + Stabilize · Living Map</footer>
+</main>
+</div>
+<script>
+const KEY="bodyoracle-return-stabilize-map";
+function saveLocal(){localStorage.setItem(KEY,document.getElementById("editable").innerHTML);alert("Saved on this device.");}
+function downloadHTML(){
+ const clone=document.documentElement.cloneNode(true);
+ const ed=clone.querySelector("#editable");
+ ed.innerHTML=document.getElementById("editable").innerHTML;
+ const blob=new Blob(["<!DOCTYPE html>\n"+clone.outerHTML],{type:"text/html"});
+ const a=document.createElement("a"); a.href=URL.createObjectURL(blob);
+ a.download="return-stabilize-living-map.html"; a.click(); URL.revokeObjectURL(a.href);
+}
+window.addEventListener("DOMContentLoaded",()=>{const x=localStorage.getItem(KEY); if(x) document.getElementById("editable").innerHTML=x;});
+</script>
+
+</body></html>
